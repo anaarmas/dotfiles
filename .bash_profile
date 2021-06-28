@@ -12,3 +12,6 @@ export REPOS_DIR=~/Repos
 if [ -f "${REPOS_DIR}"/git/git/contrib/completion/git-completion.bash ]; then
   source "${REPOS_DIR}"/git/git/contrib/completion/git-completion.bash 
 fi
+
+# export variables and set up aliases for gh+ts development
+source .gh_ts_dev.sh 

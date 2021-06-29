@@ -7,3 +7,6 @@ export TURBOSCAN_S3_BUCKET="turboscan-dev"
 export ENTERPRISE_ENABLE_AQUEDUCT=true # For Committer Based Billing jobs (only needed in Enterprise mode)
 export AWS_ACCESS_KEY_ID_GITHUB_PRODUCTION=minio
 export AWS_SECRET_ACCESS_KEY_ID_GITHUB_PRODUCTION=miniostorage
+
+# Load secrets
+[ -f "$HOME/.secrets" ] && source "$HOME/.secrets"

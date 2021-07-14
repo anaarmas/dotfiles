@@ -14,4 +14,9 @@ if [ -f "${REPOS_DIR}"/git/git/contrib/completion/git-completion.bash ]; then
 fi
 
 # export variables and set up aliases for gh+ts development
-source .gh_ts_dev.sh 
+source ~/.gh_ts_dev.sh
+
+# Setting PATH for Python 3.9
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
+export PATH

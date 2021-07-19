@@ -1,6 +1,7 @@
 
 alias ts_tunnel="ssh -p 2222 -o NoHostAuthenticationForLocalhost=yes -R 8888:localhost:8888 -R 9000:localhost:9000 root@localhost"
 
+export ENTERPRISE_ADVANCED_SECURITY_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export ENTERPRISE_CODE_SCANNING_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export TURBOSCAN_S3_ENDPOINT="http://localhost:9000"
 export TURBOSCAN_S3_BUCKET="turboscan-dev"

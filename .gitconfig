@@ -1,0 +1,20 @@
+[user]
+	email = 54946499+anaarmas@users.noreply.github.com
+	name = anaarmas
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	subup = submodule update --init
+	br = branch
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[push]
+	default = current
+[github]
+	user = anaarmas
+[credential]
+	helper = osxkeychain

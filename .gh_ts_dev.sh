@@ -1,6 +1,10 @@
 
 alias ts_tunnel="ssh -p 2222 -o NoHostAuthenticationForLocalhost=yes -R 8888:localhost:8888 -R 9000:localhost:9000 root@localhost"
 
+alias enable_alert_issue_links="./bin/toggle-feature-flag enable task_list_beta;./bin/toggle-feature-flag enable extract_checklists;./bin/toggle-feature-flag enable issues_alerts_integration"
+
+alias enable_code_scanning_in_db="./bin/rake --trace "enterprise:code_scanning:create[]";./bin/toggle-feature-flag enable advanced_security_private_beta;enable_issue_links"
+
 export ENTERPRISE_ADVANCED_SECURITY_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export ENTERPRISE_CODE_SCANNING_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export TURBOSCAN_S3_ENDPOINT="http://localhost:9000"

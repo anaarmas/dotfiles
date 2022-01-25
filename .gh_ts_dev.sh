@@ -9,6 +9,8 @@ alias seed_with_turbotest="cd ~/Repos/github/turbotest;poetry run turbotest run 
 
 alias export_oauth_token="unset GITHUB_TOKEN;export GITHUB_TOKEN="$(gh config get --host github.com oauth_token)""
 
+alias fix_dns="echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf > /dev/null"
+
 export ENTERPRISE_ADVANCED_SECURITY_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export ENTERPRISE_CODE_SCANNING_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export TURBOSCAN_S3_ENDPOINT="http://localhost:9000"

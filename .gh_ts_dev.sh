@@ -1,6 +1,8 @@
 
 alias ts_tunnel="ssh -p 2222 -o NoHostAuthenticationForLocalhost=yes -R 8888:localhost:8888 -R 9000:localhost:9000 root@localhost"
 
+alias enable_dev_friendly_alerts="./bin/toggle-feature-flag enable code_scanning_dev_friendly_alerts;./bin/toggle-feature-flag enable code_scanning_write_dev_friendly_alerts"
+
 alias enable_alert_issue_links="./bin/toggle-feature-flag enable task_list_beta;./bin/toggle-feature-flag enable extract_checklists;./bin/toggle-feature-flag enable issues_alerts_integration"
 
 alias enable_code_scanning_in_db="./bin/rake --trace "enterprise:code_scanning:create[]";./bin/toggle-feature-flag enable advanced_security_private_beta;enable_issue_links"

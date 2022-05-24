@@ -1,8 +1,5 @@
 # start the ssh agent
-ssh-add
-
-# start ruby stuff
-eval "$(rbenv init -)"
+ssh-add -K
 
 PATH=~/.rbenv/shims:/usr/local/mysql/bin:$PATH
 

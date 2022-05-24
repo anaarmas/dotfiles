@@ -1,7 +1,7 @@
 
 alias ts_tunnel="ssh -p 2222 -o NoHostAuthenticationForLocalhost=yes -R 8888:localhost:8888 -R 9000:localhost:9000 root@localhost"
 
-alias enable_dev_friendly_alerts="./bin/toggle-feature-flag enable code_scanning_dev_friendly_alerts;./bin/toggle-feature-flag enable code_scanning_write_dev_friendly_alerts;./bin/toggle-feature-flag enable review_thread_component_on_files_tab"
+alias enable_dev_friendly_alerts="./bin/toggle-feature-flag enable code_scanning_dev_friendly_alerts;./bin/toggle-feature-flag enable code_scanning_write_dev_friendly_alerts"
 
 alias enable_alert_issue_links="./bin/toggle-feature-flag enable task_list_beta;./bin/toggle-feature-flag enable extract_checklists;./bin/toggle-feature-flag enable issues_alerts_integration"
 
@@ -10,8 +10,6 @@ alias enable_code_scanning_in_db="./bin/rake --trace "enterprise:code_scanning:c
 alias seed_with_turbotest="cd ~/Repos/github/turbotest;poetry run turbotest run --url http://github.localhost --organization github --cleanup skip main_flow/first_analysis/first_alert;echo 'remember to update development PAT AND enable GHAS for github org repos with new codespaces instances'"
 
 alias export_oauth_token="unset GITHUB_TOKEN;export GITHUB_TOKEN="$(gh config get --host github.com oauth_token)""
-
-alias fix_dns="echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf > /dev/null"
 
 export ENTERPRISE_ADVANCED_SECURITY_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.
 export ENTERPRISE_CODE_SCANNING_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.

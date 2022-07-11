@@ -1,5 +1,5 @@
 # start the ssh agent
-ssh-add -K
+ssh-add --apple-use-keychain 
 
 PATH=~/.rbenv/shims:/usr/local/mysql/bin:$PATH
 

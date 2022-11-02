@@ -1,6 +1,3 @@
-# start the ssh agent
-ssh-add --apple-use-keychain 
-
 PATH=~/.rbenv/shims:/usr/local/mysql/bin:$PATH
 
 export REPOS_DIR=~/Repos

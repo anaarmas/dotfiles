@@ -9,6 +9,13 @@ alias enable_code_scanning_in_db="./bin/rake --trace "enterprise:code_scanning:c
 
 alias seed_with_turbotest="cd ~/Repos/github/turbotest;poetry run turbotest run --url http://github.localhost --organization github --cleanup skip main_flow/first_analysis/first_alert;echo 'remember to update development PAT AND enable GHAS for github org repos with new codespaces instances'"
 
+// check if we are in a codespace and have a PAT available as a codespace secret
+if [-z $PAT_FOR_CLONING_ACROSS_CODESPACES]
+then
+	unset GITHUB_TOKEN
+	export GITHUB_TOKEN=$PAT_FOR_CLONING_ACROSS_CODESPACES
+fi
+
 alias export_oauth_token="unset GITHUB_TOKEN;export GITHUB_TOKEN="$(gh config get --host github.com oauth_token)""
 
 export ENTERPRISE_ADVANCED_SECURITY_ENABLED=true # Only needed in Enterprise mode, but there's no disadvantage to setting it in DotCom mode too.

@@ -1,3 +1,9 @@
+# start the ssh agent
+ssh-add --apple-use-keychain 
+if test -f /Users/ana/.ssh/id_rsa_gh_prod; then
+  ssh-add --apple-use-keychain /Users/ana/.ssh/id_rsa_gh_prod
+fi
+
 PATH=~/.rbenv/shims:/usr/local/mysql/bin:$PATH
 
 export REPOS_DIR=~/Repos

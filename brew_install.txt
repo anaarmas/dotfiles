@@ -1,0 +1,7 @@
+git
+gh
+wget
+curl
+zip
+apparix
+rsync

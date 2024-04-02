@@ -1,4 +1,4 @@
-source .shared.sh
+source ~/.shared.sh
 
 # set up git autocompletion
 if [ -f ~/Repos/git/git/contrib/completion/git-completion.bash ]; then

@@ -3,5 +3,4 @@ gh
 wget
 curl
 zip
-apparix
 rsync

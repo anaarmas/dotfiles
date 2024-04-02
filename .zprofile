@@ -1,4 +1,4 @@
-source .shared.sh
+source ~/.shared.sh
 
 # set up git autocompletion
 # TODO this is not meant to be sourced I need to put this file somewhere,

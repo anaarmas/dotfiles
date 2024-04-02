@@ -7,17 +7,6 @@ export EDITOR=vim
 
 eval $(/opt/homebrew/bin/brew shellenv)
 
-#############################
-# Bookmarks with apparix 
-#############################
-# https://github.com/micans/apparix/
-# Requires copying the file https://github.com/micans/apparix/blob/main/.bourne-apparix
-# into my home directory
-if [ -f ~/.bourne-apparix ]; then
-  source ~/.bourne-apparix
-fi
-
-
 
 # export variables and set up aliases for gh+ts development
 # source ~/.gh_ts_dev.sh

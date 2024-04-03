@@ -18,3 +18,5 @@
 	user = anaarmas
 [credential]
 	helper = osxkeychain
+[core]
+	excludesfile = /Users/anaarmas/.gitignore

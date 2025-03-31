@@ -100,3 +100,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# git aliases
+alias gfo="git fetch origin"
+alias gpom="git pull origin main"
+alias gcb="git co -b"
+alias grom="git rebase origin main"
+alias mastermerge='git fetch origin master && git merge origin/master'
